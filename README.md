@@ -1,6 +1,6 @@
 ## mb-file
 
-Le module JavaScripts de teste d'existance d'un fichier quelconque
+Module Javascript manipulant les fichiers
 
 ## Installation
 
