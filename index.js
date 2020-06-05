@@ -1,11 +1,11 @@
 const fs = require("fs");
 
 /**
- * Module permettant de trouvé un fichier si cela existe
- * @param {String} source La source du fichier qu'on veut trouvé l'existence
- * @param {Function} callback La fonction de retour, nous spécifiant si le fichier existe ou pas 
+ * Vérifie si le fichier dont la source est passée en paramètre existe ou pas
+ * @param {String} source La source du fichier à vérifier
+ * @param {Function} callback
 */
-module.exports.verify = (source, callback) => {
+exports.verify = (source, callback) => {
     try {
         if (source) {
             fs.stat(source, (err, stats) => {
@@ -29,4 +29,16 @@ module.exports.verify = (source, callback) => {
     } catch (exception) {
         callback(false, "Une exception a été lévée : " + exception)
     }
+}
+
+/**
+ * Renvoi l'extension d'un fichier
+ * @param {String} source La source du fichier en question
+ * @returns {String} file_extension
+ */
+exports.getFileExtension = (source) => {
+    let array = source.split('.');
+    let length = array.length;
+    
+    return '.'+array[length - 1];
 }

@@ -1,10 +1,10 @@
 {
   "name": "mb-file",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Module manipulant les fichiers",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node test.js"
   },
   "repository": {
     "type": "git",
@@ -13,7 +13,9 @@
   "keywords": [
     "file",
     "testfile",
-    "verify"
+    "verify",
+    "file-extension",
+    "extension"
   ],
   "author": "Don de Dieu Bolenge",
   "license": "MIT"
